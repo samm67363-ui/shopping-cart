@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Create Account</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.footer-text a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.password-hint {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Create your account</h2>
+    <p class="subtitle">Join us in less than a minute</p>
+
+    <form action="register.php" method="POST">
+        <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="John Doe" required>
+        </div>
+
+        <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Create a strong password" required>
+            <div class="password-hint">
+                Minimum 8 characters, include letters & numbers
+            </div>
+        </div>
+
+        <button type="submit">Create Account</button>
+    </form>
+
+    <div class="footer-text">
+        Already have an account?
+        <a href="login.php">Sign in</a>
+    </div>
+</div>
+
+</body>
+</html>
